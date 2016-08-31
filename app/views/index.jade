@@ -1,5 +1,350 @@
-extends layout
-
-block content
-  h1= title
-  p= subtitle
+doctype html
+//
+  Slate by Pixelarity
+  pixelarity.com @pixelarity
+  License: pixelarity.com/license
+html
+  head
+    title Untitled
+    | &#x9;&#x9;
+    meta(charset="utf-8")
+    | &#x9;&#x9;
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    //if lte IE 8
+      script(src="assets/js/ie/html5shiv.js")
+    | &#x9;&#x9;
+    link(rel="stylesheet", href="assets/css/main.css")
+    //if lte IE 8
+      link(rel="stylesheet", href="assets/css/ie8.css")
+    //if lte IE 9
+      link(rel="stylesheet", href="assets/css/ie9.css")
+    | &#x9;&#x9;
+    noscript
+      link(rel="stylesheet", href="assets/css/noscript.css")
+  | &#x9;
+  body
+    // Header
+    header#header.alt
+      h1
+        a(href="index.html")
+          | Slate 
+          span by Pixelarity
+      | &#x9;&#x9;&#x9;&#x9;
+      nav#nav
+        ul
+          li
+            a(href="index.html") Home
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.submenu.fa-angle-down(href="#") Page Layouts
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            ul
+              li
+                a(href="left-sidebar.html") Left Sidebar
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href="right-sidebar.html") Right Sidebar
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href="no-sidebar.html") No Sidebar
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              li
+                a(href="#") Submenu
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                ul
+                  li
+                    a(href="#") Option One
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href="#") Option Two
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href="#") Option Three
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    a(href="#") Option Four
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href="elements.html") Elements
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a.button(href="#") Sign Up
+    // Banner
+    section#banner
+      article
+        img(src="images/slide01.jpg", alt="")
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        .inner
+          h2
+            a(href="#") Magna tempus. Sed feugiat.
+      | &#x9;&#x9;&#x9;&#x9;
+      article
+        img(src="images/slide02.jpg", alt="")
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        .inner
+          h2
+            a(href="#") Aliquam veroeros nullam.
+      | &#x9;&#x9;&#x9;&#x9;
+      article
+        img(src="images/slide03.jpg", alt="")
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        .inner
+          h2
+            a(href="#") Consequat dolore adipiscing.
+    // One
+    section#one.wrapper.major-pad
+      .inner
+        section.spotlight
+          .content
+            h2 Libero bibendum nullam vitae magna sed veroeros
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id interdum magna, ultricies aliquet curabitur sed metus pellentesque, ornare sapien quis.
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          span.image
+            img(src="images/pic07.jpg", alt="")
+    // Two
+    section#two.wrapper.content-pad
+      .inner
+        .features
+          section.content
+            span.icon-wrapper.major
+              span.icon.fa-pencil
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 Praesent sed donec
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              | Proin consequat luctus elit, nec blandit tellus ut volutpat magna. mi euismod elementum lectus et consequat etiam lorem etiam sed tempus. Feugiat veroeros lorem ipsum dolor.
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          section.content
+            span.icon-wrapper.major
+              span.icon.fa-paper-plane
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 Commodo mollis
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              | Pellentesque, ornare sapien quis, tristique ante. Proin nec facilisis odio. Integer elementum nunc nec leo interdum, non tristique eros laoreet. Integer vitae erat suscipit commodo.
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          section.content
+            span.icon-wrapper.major
+              span.icon.fa-cloud
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 Magnis curabitur
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              | Duis vulputate sit amet metus quis facilisis. Sed dapibus neque erat fringilla tincidunt. Nullam sapien et sapien, iaculis ac varius ultrices nec metus. Aenean ultricies magna.
+    // Three
+    section#three.wrapper.style2
+      .inner
+        h2 Etiam sed tellus
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        .posts
+          section.post
+            span.image
+              img(src="images/pic01.jpg", alt="")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .content
+              h3 Congue portitor
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                | Aenean ultricies magna non sapien rhoncus, ac ullamcorper lorem convallis. Quisque at venenatis nisi, amet finibus mauris. Sed sodales ultricies eros, sit amet sodales sapien.
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.actions
+                li
+                  a.button(href="#") More
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          section.post
+            span.image
+              img(src="images/pic02.jpg", alt="")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .content
+              h3 Duis nisl euismod
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                | Ultrices nec metus. Aenean ultricies magna et sapien rhoncus ac ullamcorper lorem convallis. Quisque at venenatis nisi amet finibus mauris. Sed sodales ultricies magna etiam.
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.actions
+                li
+                  a.button(href="#") More
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          section.post
+            span.image
+              img(src="images/pic03.jpg", alt="")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .content
+              h3 Elementum auctor
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                | Quis interdum. Lorem quis lacus justo. Sed libero condimentum vehicula sem vel, mattis amet mauris. Nullam lacinia sit amet felis vel vestibulum. Morbi aliquam aenean.
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.actions
+                li
+                  a.button(href="#") More
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          section.post
+            span.image
+              img(src="images/pic04.jpg", alt="")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .content
+              h3 Urna vel lacinia
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                | Integer vel tincidunt lacus. Nulla augue nunc, eleifend quis leo ac, maximus interdum tellus. Etiam at vestibulum felis, id efficitur risus. Praesent ac nulla ex. Duis elementum.
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.actions
+                li
+                  a.button(href="#") More
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          section.post
+            span.image
+              img(src="images/pic05.jpg", alt="")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .content
+              h3 Neque et suscipit
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                | Libero condimentum, vehicula sem vel, mattis mauris. Nullam lacinia sit amet felis vel vestibulum. Morbi in aliquam est. Aenean dapibus porttitor nulla ultrices venenatis.
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.actions
+                li
+                  a.button(href="#") More
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          section.post
+            span.image
+              img(src="images/pic06.jpg", alt="")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            .content
+              h3 Vestibulum placerat
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                | Tristique tellus et ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent mauris risus, pellentesque eu leo non, tincidunt.
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              ul.actions
+                li
+                  a.button(href="#") More
+    // Contact
+    section#contact.wrapper.split
+      .inner
+        section
+          h2 Send us a message
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          form(method="post", action="#")
+            .row.uniform
+              .6u(class="12u$(large) 6u(medium) 12u$(xsmall)")
+                label(for="name") Name
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                input#name(type="text", name="name")
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .6u$(class="12u$(large) 6u$(medium) 12u$(xsmall)")
+                label(for="email") Email
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                input#email(type="email", name="email")
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .12u$(class="")
+                label(for="message") Message
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                textarea#message(name="message", rows="5")
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .12u$(class="")
+                ul.actions
+                  li
+                    input.special(type="submit", value="Send Message")
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  li
+                    input(type="reset", value="Reset")
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        section
+          h2 Other ways to reach us
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          ul.bulleted-icons
+            li
+              span.icon-wrapper
+                span.icon.fa-envelope
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              h3 Email
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                a(href="#") information@untitled.tld
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              span.icon-wrapper
+                span.icon.fa-twitter
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              h3 Twitter
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                a(href="#") twitter.com/untitled-tld
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              span.icon-wrapper
+                span.icon.fa-phone
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              h3 Phone
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p (800) 555-0000
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              span.icon-wrapper
+                span.icon.fa-facebook
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              h3 Facebook
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                a(href="#") facebook.com/untitled-tld
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              span.icon-wrapper
+                span.icon.fa-home
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              h3 Mailing Address
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                | 1234 Fictional Avenue
+                br
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nashville, TN 00000
+                br
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;United States
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            li
+              span.icon-wrapper
+                span.icon.fa-linkedin
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              h3 LinkedIn
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              p
+                a(href="#") linkedin.com/untitled-tld
+    // Footer
+    footer#footer
+      .inner
+        p.copyright
+          | &copy; Untitled Corp. All rights reserved. Lorem ipsum dolor sit amet feugiat tempus aliquam.
+        | &#x9;&#x9;&#x9;&#x9;&#x9;
+        ul.menu
+          li
+            a(href="#")
+              | Terms
+              span  of Use
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href="#")
+              | Privacy
+              span  Policy
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          li
+            a(href="#")
+              | Legal
+              span  Information
+    // Scripts
+    script(src="assets/js/jquery.min.js")
+    | &#x9;&#x9;&#x9;
+    script(src="assets/js/jquery.dropotron.min.js")
+    | &#x9;&#x9;&#x9;
+    script(src="assets/js/jquery.scrollex.min.js")
+    | &#x9;&#x9;&#x9;
+    script(src="assets/js/skel.min.js")
+    | &#x9;&#x9;&#x9;
+    script(src="assets/js/util.js")
+    //if lte IE 8
+      script(src="assets/js/ie/respond.min.js")
+    | &#x9;&#x9;&#x9;
+    script(src="assets/js/main.js")

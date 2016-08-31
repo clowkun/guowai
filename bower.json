@@ -5,5 +5,11 @@
     "**/.*",
     "node_modules",
     "components"
-  ]
+  ],
+  "devDependencies": {
+    "livereload-js": "^2.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }

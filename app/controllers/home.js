@@ -9,7 +9,7 @@ module.exports = function (app) {
 router.get('/', function (req, res, next) {
   var articles = [new Article(), new Article()];
     res.render('index', {
-      title: 'guowai: study abroad and go further',
+      title: 'guowai: study abroad and go further hi Nathan',
       articles: articles
     });
 });

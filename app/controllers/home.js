@@ -1,10 +1,8 @@
 var express = require('express'),
-  livereload = require('express-livereload'),
   router = express.Router(),
   Article = require('../models/article');
 
 module.exports = function (app) {
-  livereload(app, config={});
   app.use('/', router);
   app.use('/login', router);
 };

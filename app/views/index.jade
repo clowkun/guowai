@@ -4,46 +4,16 @@ block content
   // Header
   header#header.alt
     h1
-      a(href="index.html")
-        | Slate 
-        span by Pixelarity
+      a(href="/")
+        | #{title}
     | &#x9;
     nav#nav
       ul
         li
-          a(href="index.html") Home
+          a(href="/") Home
         | &#x9;&#x9;&#x9;
         li
-          a.submenu.fa-angle-down(href="#") Page Layouts
-          | &#x9;&#x9;&#x9;&#x9;
-          ul
-            li
-              a(href="left-sidebar.html") Left Sidebar
-            | &#x9;&#x9;&#x9;&#x9;&#x9;
-            li
-              a(href="right-sidebar.html") Right Sidebar
-            | &#x9;&#x9;&#x9;&#x9;&#x9;
-            li
-              a(href="no-sidebar.html") No Sidebar
-            | &#x9;&#x9;&#x9;&#x9;&#x9;
-            li
-              a(href="#") Submenu
-              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-              ul
-                li
-                  a(href="#") Option One
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                li
-                  a(href="#") Option Two
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                li
-                  a(href="#") Option Three
-                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
-                li
-                  a(href="#") Option Four
-        | &#x9;&#x9;&#x9;
-        li
-          a(href="elements.html") Elements
+          a(href="/login") Login
         | &#x9;&#x9;&#x9;
         li
           a.button(href="#") Sign Up
@@ -54,21 +24,8 @@ block content
       | &#x9;&#x9;
       .inner
         h2
-          a(href="#") Magna tempus. Sed feugiat.
+          a(href="#") #{subtitle}
     | &#x9;
-    article
-      img(src="images/slide02.jpg", alt="")
-      | &#x9;&#x9;
-      .inner
-        h2
-          a(href="#") Aliquam veroeros nullam.
-    | &#x9;
-    article
-      img(src="images/slide03.jpg", alt="")
-      | &#x9;&#x9;
-      .inner
-        h2
-          a(href="#") Consequat dolore adipiscing.
   // One
   section#one.wrapper.major-pad
     .inner

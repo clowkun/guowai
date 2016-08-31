@@ -4,6 +4,7 @@ var express = require('express'),
 
 module.exports = function (app) {
   app.use('/', router);
+  app.use('/login', router);
 };
 
 router.get('/', function (req, res, next) {
@@ -12,4 +13,8 @@ router.get('/', function (req, res, next) {
       title: 'guowai: study abroad and go further hi Nathan',
       articles: articles
     });
+});
+
+router.get('/login', function (req, res, next) {
+    res.send('Please log in');
 });

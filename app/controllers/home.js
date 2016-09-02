@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
   var articles = [new Article(), new Article()];
     res.render('index', {
       title: 'Guowai',
-      subtitle: 'Be foregin in a familiar setting',
+      subtitle: 'Be familiar in a foreign setting',
       articles: articles
     });
 });

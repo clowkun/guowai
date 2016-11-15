@@ -1,6 +1,6 @@
 
 // Azure storage import
-var azure_storage = require('azure-storage');
+var azure = require('azure-storage');
 var nconf = require('nconf');
 nconf.env()
      .file({ file: 'config.json', search: true });
@@ -23,7 +23,7 @@ var userList = new UserList(user);
 module.exports = function (app) {
   app.use('/', router);
   app.use('/login', router);
-  app.post('/addtask', taskList.addTask.bind(taskList));
+  app.get('/adduser', userList.addUser.bind(userList));
 };
 
 router.get('/', function (req, res, next) {

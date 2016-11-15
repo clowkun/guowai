@@ -36,8 +36,8 @@ User.prototype = {
     var itemDescriptor = {
       PartitionKey: entityGen.String(self.partitionKey),
       RowKey: entityGen.String(uuid()),
-      username: entityGen.String(item.name),
-      password: entityGen.String(item.category)
+      username: entityGen.String(item.username),
+      password: entityGen.String(item.password)
     };
     self.storageClient.insertEntity(self.tableName, itemDescriptor, function entityInserted(error) {
       if(error){  

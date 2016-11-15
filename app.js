@@ -1,8 +1,5 @@
 // Application (server) file for Express Node JS
 
-// Azure storage import
-var azure_storage = require('azure-storage');
-
 var express = require('express'),
   config = require('./config/config');
 

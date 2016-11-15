@@ -1,4 +1,4 @@
-
+// Application (server) file for Express Node JS
 
 var express = require('express'),
   config = require('./config/config');

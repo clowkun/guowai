@@ -1,0 +1,177 @@
+extends layout
+
+block content
+  // Header
+  header#header.alt
+    h1
+      a(href="/")
+        | #{title}
+    | &#x9;
+    nav#nav
+      ul
+        li
+          a(href="/") Home
+        | &#x9;&#x9;&#x9;
+        li
+          a(href="/login") Login
+        | &#x9;&#x9;&#x9;
+        li
+          a.button(href="#") Sign Up
+  // Banner
+  section#banner
+    article
+      img(src="images/slide01.jpg", alt="")
+      | &#x9;&#x9;
+      .inner
+        h2
+          a(href="#") #{subtitle}
+    | &#x9;
+
+  // Login
+  section#contact.wrapper.split
+    .inner
+      section
+        h2 Please login
+        | &#x9;&#x9;&#x9;
+        form(method="post", action="#")
+          .row.uniform
+            .6u
+              label(for="name") Name
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              input#name(type="text", name="name")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .6u
+              label(for="email") Password
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              input#email(type="email", name="email")
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .12u
+
+          ul.actions
+            li
+              input.special(type="submit", value="Login")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          | &#x9;&#x9;
+          section
+
+  // Contact
+  section#contact.wrapper.split
+    .inner
+      section
+        h2 Send us a message
+        | &#x9;&#x9;&#x9;
+        form(method="post", action="#")
+          .row.uniform
+            .6u
+              label(for="name") Name
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              input#name(type="text", name="name")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .6u
+              label(for="email") Email
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              input#email(type="email", name="email")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .12u
+              label(for="message") Message
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              textarea#message(name="message", rows="5")
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .12u
+              ul.actions
+                li
+                  input.special(type="submit", value="Send Message")
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  input(type="reset", value="Reset")
+      | &#x9;&#x9;
+      section
+        h2 Other ways to reach us
+        | &#x9;&#x9;&#x9;
+        ul.bulleted-icons
+          li
+            span.icon-wrapper
+              span.icon.fa-envelope
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 Email
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              a(href="#") information@untitled.tld
+          | &#x9;&#x9;&#x9;&#x9;
+          li
+            span.icon-wrapper
+              span.icon.fa-twitter
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 Twitter
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              a(href="#") twitter.com/untitled-tld
+          | &#x9;&#x9;&#x9;&#x9;
+          li
+            span.icon-wrapper
+              span.icon.fa-phone
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 Phone
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            p (800) 555-0000
+          | &#x9;&#x9;&#x9;&#x9;
+          li
+            span.icon-wrapper
+              span.icon.fa-facebook
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 Facebook
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              a(href="#") facebook.com/untitled-tld
+          | &#x9;&#x9;&#x9;&#x9;
+          li
+            span.icon-wrapper
+              span.icon.fa-home
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 Mailing Address
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              | 1234 Fictional Avenue
+              br
+              | &#x9;&#x9;&#x9;&#x9;&#x9;Nashville, TN 00000
+              br
+              | &#x9;&#x9;&#x9;&#x9;&#x9;United States
+          | &#x9;&#x9;&#x9;&#x9;
+          li
+            span.icon-wrapper
+              span.icon.fa-linkedin
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            h3 LinkedIn
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              a(href="#") linkedin.com/untitled-tld
+  // Footer
+  footer#footer
+    .inner
+      p.copyright
+        | &copy; Untitled Corp. All rights reserved. Lorem ipsum dolor sit amet feugiat tempus aliquam.
+      | &#x9;&#x9;
+      ul.menu
+        li
+          a(href="#")
+            | Terms
+            span  of Use
+        | &#x9;&#x9;&#x9;
+        li
+          a(href="#")
+            | Privacy
+            span  Policy
+        | &#x9;&#x9;&#x9;
+        li
+          a(href="#")
+            | Legal
+            span  Information
+  // Scripts
+  script(src="/js/jquery.min.js")
+  script(src="/js/jquery.dropotron.min.js")
+  script(src="/js/jquery.scrollex.min.js")
+  script(src="/js/skel.min.js")
+  script(src="/js/util.js")
+  //if lte IE 8
+  script(src="/js/ie/respond.min.js")
+  script(src="/js/main.js")

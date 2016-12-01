@@ -38,3 +38,7 @@ router.get('/login', function (req, res, next) {
       title: 'Guowai'
   });
 });
+
+router.post('/login', function (req, res, next) {
+    console.log('post login form');
+});

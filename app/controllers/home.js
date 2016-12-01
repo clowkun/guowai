@@ -34,5 +34,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/login', function (req, res, next) {
-    res.send('Please log in');
+  res.render('login', {
+      title: 'Guowai'
+  });
 });

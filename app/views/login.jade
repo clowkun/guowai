@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  // Login form
+  h1
+    | #{title}
+  form(method="post", action="#")
+    .row.uniform
+      .6u
+        label(for="username") User Name
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#username(type="text", name="username")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+      .6u
+        label(for="password") Password
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#password(type="password", name="password")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+      .12u
+        ul.actions
+          li
+            input.special(type="submit", value="Login")
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+
+  // Scripts
+  script(src="/js/jquery.min.js")
+  script(src="/js/jquery.dropotron.min.js")
+  script(src="/js/jquery.scrollex.min.js")
+  script(src="/js/skel.min.js")
+  script(src="/js/util.js")
+  //if lte IE 8
+  script(src="/js/ie/respond.min.js")
+  script(src="/js/main.js")

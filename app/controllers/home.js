@@ -27,12 +27,10 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  var articles = [new Article(), new Article()];
-    res.render('index', {
-      title: 'Guowai',
-      subtitle: 'Be familiar in a foreign setting',
-      articles: articles
-    });
+  res.render('index', {
+    title: 'Guowai',
+    subtitle: 'Be familiar in a foreign setting'
+  });
 });
 
 router.get('/login', function (req, res, next) {

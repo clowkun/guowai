@@ -12,8 +12,8 @@ UserList.prototype = {
   addUser: function(req,res) {
     var self = this;
     var item = {
-        username: "default",
-        password: "test"
+        username: "real",
+        password: "world hawaii"
     };
     self.user.addItem(item, function itemAdded(error) {
       if(error) {

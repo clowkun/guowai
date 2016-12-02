@@ -39,8 +39,11 @@ router.get('/login', function (req, res, next) {
 
 router.post('/login', function (req, res, next) {
     console.log('post login form');
+    // Get the credentials that are being passed in from the user
+    // Check them against our data
+    // Set a session variable so that a user can access the private side of the site
 });
 
 router.get('/signin', function (req, res, next) {
-	res.render('signin');
+	res.render('SignUp');
 });

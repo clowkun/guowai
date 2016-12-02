@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  // SignIn Form
+  h1
+    | #{title}
+    
+      h2 Sign up to study in America now!
+          | &#x9;&#x9;&#x9;&#x9;
+    
+    
+  form(method="post", action="/login")
+    .row.uniform
+      .6u
+        label(for="Name") Name
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#name(type="text", name="name")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+        .6u
+        label(for="family name") Family Name
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#family name(type="text", name="family name")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+        .6u
+        label(for="Country") Country
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#country(type="text", name="Country")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .6u
+        label(for="Street") Street
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#street(type="text", name="Street")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .6u
+        label(for="City") City
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#city(type="city", name="City")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .6u
+        label(for="Username") User Name
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#username(type="text", name="username")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+      .6u
+      
+                  .6u
+        label(for="requiredcity") required city in the US to study in
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#requiredcity(type="text", name="requiredcity")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+      
+        label(for="password") Password
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+        input#password(type="password", name="password")
+      | &#x9;&#x9;&#x9;&#x9;&#x9;
+      .12u
+        ul.actions
+          li
+            input.special(type="submit", value="Signin")
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+
+  // Scripts
+  script(src="/js/jquery.min.js")
+  script(src="/js/jquery.dropotron.min.js")
+  script(src="/js/jquery.scrollex.min.js")
+  script(src="/js/skel.min.js")
+  script(src="/js/util.js")
+  //if lte IE 8
+  script(src="/js/ie/respond.min.js")
+  script(src="/js/main.js")

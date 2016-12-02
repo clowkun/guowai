@@ -22,4 +22,9 @@ UserList.prototype = {
       res.redirect('/');
     });
   },
+  findOne: function(data, res) {
+      console.log(data);
+      console.log(res);
+      res();
+  }
 }

@@ -34,10 +34,38 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+passport.serializeUser(function(user, done) {
+  done(null, true);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, false);
+  });
+});
+
+passport.use(new passportLocalStrategy(
+  function(username, password, done) {
+    userList.findOne({ username: username, password: password }, function(err, user) {
+      console.log("user created");
+      return done(null, true, { message: true });
+      if (err) { return done(err); }
+      if (!user) {
+        return done(null, false, { message: 'Incorrect username.' });
+      }
+      if (!user.validPassword(password)) {
+        return done(null, false, { message: 'Incorrect password.' });
+      }
+      return done(null, user);
+    });
+  }
+));
+
 
 module.exports = function (app) {
   app.use('/', router);
   app.use('/login', router);
+  app.use('/dashboard', router);
   app.get('/adduser', userList.addUser.bind(userList));
 };
 
@@ -52,22 +80,15 @@ router.get('/login', function (req, res, next) {
   res.render('login');
 });
 
-router.post('/login', function (req, res, next) {
-    console.log('post login form');
-    // Get the credentials that are being passed in from the user
-    console.log(req.body);
-    if (!req.body.name || !req.body.password) {
-        console.log('post login form failed');
-    } else if (req.body.name === "wap" || req.body.password === "test") {
-        // Check them against our data
-        req.session.user = "wap"
-        req.session.admin = true;
-        // Set a session variable so that a user can access the private side of the site
-        console.log('post login form succeeded');
-        res.render('dashboard');
-    }
-});
+router.post('/login',
+  passport.authenticate('local', { successRedirect: '/',
+                                   failureRedirect: '/login'})
+);
 
 router.get('/signin', function (req, res, next) {
 	res.render('SignUp');
+});
+
+router.get('/dashboard', function (req, res, next) {
+	res.render('dashboard');
 });

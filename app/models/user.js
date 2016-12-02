@@ -27,6 +27,20 @@ User.prototype = {
       }
     });
   },
+  
+  findOne: function(username, password) {
+      console.log("findOne called");
+      var UserModel = function() {
+          this.username = username;
+          this.password = password;
+      };
+      
+      UserModel.prototype.validPassword = function(password) {
+          return true;
+      };
+      
+      return UserModel();
+  },
 
   addItem: function(item, callback) {
     self = this;

@@ -17,5 +17,9 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/login', function (req, res, next) {
-    res.send('Please log in');
+	res.render('login');
+});
+
+router.get('/signin', function (req, res, next) {
+	res.render('signin');
 });

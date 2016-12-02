@@ -34,11 +34,13 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/login', function (req, res, next) {
-  res.render('login', {
-      title: 'Guowai'
-  });
+  res.render('login');
 });
 
 router.post('/login', function (req, res, next) {
     console.log('post login form');
+});
+
+router.get('/signin', function (req, res, next) {
+	res.render('signin');
 });

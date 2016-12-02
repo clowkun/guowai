@@ -5,32 +5,37 @@ block content
   section#contact.wrapper.split
     .inner
       section
-        h2 Please login
+        h2 Sign up
         | &#x9;&#x9;&#x9;
         form(method="post", action="#")
           .row.uniform
             .6u
-              label(for="name") Name
+              label(for="name") Username
               | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               input#name(type="text", name="name")
             | &#x9;&#x9;&#x9;&#x9;&#x9;
             .6u
-              label(for="password") Password
+              label(for="email") email
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              input#email(type="email", name="email")
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .6u
+              label(for="email") Reenter email
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              input#email(type="email", name="email")
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+            .6u
+              label(for="password") password
               | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
               input#email(type="password", name="password")
               | &#x9;&#x9;&#x9;&#x9;&#x9;
-            .6u
-              a(href="/") Forgot your Password?
             .12u
 
           ul.actions
             li
-              input.special(type="submit", value="Login")
+              input.special(type="submit", value="Sign Up")
             | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
           | &#x9;&#x9;
-          a(href="/") Not registered? Sign up here!
-          section
-
   // Scripts
   script(src="/js/jquery.min.js")
   script(src="/js/jquery.dropotron.min.js")

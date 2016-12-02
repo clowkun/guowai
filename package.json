@@ -17,6 +17,14 @@
     "morgan": "^1.6.1",
     "nconf": "^0.8.4",
     "node-uuid": "^1.4.7",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.13.3",
+    "glob": "^6.0.4",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {

@@ -52,7 +52,6 @@ router.get('/login', function (req, res, next) {
 });
 
 router.post('/login', function (req, res) {
-  console.log(req.body);
   if (!req.body.username || !req.body.password) {
     res.redirect('/');
   } else {

@@ -62,6 +62,8 @@ router.post('/login', function (req, res) {
     if (req.body.username === "wap" && req.body.password === "test") {
       req.session.username = req.body.username;
       res.redirect('/dashboard');
+    } else {
+      res.redirect('/login');
     }
   }
 });
